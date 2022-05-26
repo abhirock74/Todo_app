@@ -59,9 +59,9 @@ function tasksTable() {
     for (let i = 0; i < todayTasks.length; i++){
         table = table+`<tr>
       <th class="col-9">${todayTasks[i]}</th>
-      <th class="col-1"><button type="button" class="btn btn-primary" onclick="edit(${i})">EDIT</button></th>
-      <th class="col-1"><button type="button" class="btn btn-danger" onclick="deleteTask(${i})">Delete</button></th>
-      <th class="col-1"><button type="button" class="btn btn-success"onclick="complete(${i})">Complete</button></th>
+      <th class="col-1"><i class="fa fa-pencil text-warning"style="font-size:24px" onclick="edit(${i})"></th>
+      <th class="col-1"><i class="fa fa-trash text-danger" style="font-size:24px" onclick="deleteTask(${i})"></i></th>
+      <th class="col-1"><i class="fa fa-check text-success" style="font-size:24px" onclick="complete(${i})"></th>
     </tr>`
     };
     table = table +`</thead>
@@ -119,13 +119,13 @@ function complete(index) {
 }
 function deleteTable() {
     getData();
-  let delTable = `<table class="table">
+  let delTable = `<table class="table text-white">
   <thead>`
     for (let i = 0; i < deletedTasks.length; i++){
         delTable = delTable+`<tr>
       <th class="col-2 bg-danger">${[i+1]}</th>
       <th class="col-10 bg-danger">${deletedTasks[i]}</th>
-      <th class="col-10 bg-danger"><button type="button" class="btn btn-warning" onclick="removeDelete(${i})">Remove</button></th>
+      <th class="col-10 bg-danger"><i class="fa fa-trash text-warning" style="font-size:24px" onclick="removeDelete(${i})"></i></th>
     </tr>`
     };
     delTable = delTable +`</thead>
@@ -136,13 +136,13 @@ function deleteTable() {
 deleteTable(); // render previous deleted data on page load
 function completeTable(index) {
     getData
-    let completeTable = `<table class="table">
+    let completeTable = `<table class="table text-white">
   <thead>`
     for (let i = 0; i < completedTasks.length; i++){
         completeTable = completeTable+`<tr>
       <th class="col-2 bg-success">${[i+1]}</th>
       <th class="col-10 bg-success">${completedTasks[i]}</th>
-      <th class="col-10 bg-success"><button type="button" class="btn btn-danger" onclick="removeUpdate(${i})">Remove</button></th>
+      <th class="col-10 bg-success"><i class="fa fa-trash text-warning" style="font-size:24px" onclick="removeUpdate(${i})"></i></th>
     </tr>`
     };
     completeTable = completeTable +`</thead>
