@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shado{
+    box-shadow: 0 0 20px black;
+}
+.buttomshado{
+    box-shadow: 0 0 2px gray;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
